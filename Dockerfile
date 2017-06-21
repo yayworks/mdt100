@@ -11,7 +11,7 @@ ADD startjupyter_py3.sh /root/.startjupyter_py3.sh
 ADD startdigits.sh  /root/.startdigits.sh
 ADD starttensorboard.sh /root/.starttensorboard.sh 
 ADD starttftuts.sh /root/.starttftuts.sh
-ADD yb-sw-config.NIMBIX.ppc64le.p8AI.sh /root/sw-config.sh
+ADD yb-sw-config.NIMBIX.ppc64le.mdt100.sh /root/sw-config.sh
 
 RUN chmod +x /root/.startjupyter.sh \
 && chmod +x /root/.startjupyter_py3.sh \
