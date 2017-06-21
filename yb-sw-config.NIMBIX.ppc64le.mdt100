@@ -1,11 +1,11 @@
 #!/bin/bash
 #################################################################################################
 #                                                                                               #
-# yb--sw-config.NIMBIX.ppc64le.p8AI.sh - Software installs & configuration for PowerAI GPU Lab  #
+# yb--sw-config.NIMBIX.ppc64le.mdt100.sh - Software installs & configuration for MDT Labi       #
 #                                                                                               #
 # Copyright (C) 2017 Yayworks, Inc. - All Rights Reserved                                       #
 #                                                                                               #
-# Last revised 06/03/2017                                                                       #
+# Last revised 06/21/2017                                                                       #
 #                                                                                               #
 #################################################################################################
         display_usage() {
@@ -24,10 +24,10 @@ sudo /opt/ibm/xlf/15.1.5/bin/xlf_configure <<EOF
 1
 EOF
 
-wget https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-ppc64le.sh
+wget https://repo.continuum.io/archive/Anaconda2-4.4.0-Linux-ppc64le.sh
 
 (
-bash Anaconda3-4.4.0-Linux-ppc64le.sh  <<EOF
+bash Anaconda2-4.4.0-Linux-ppc64le.sh  <<EOF
 yes
 yes
 EOF
@@ -37,15 +37,15 @@ EOF
 rm com.out
 
 ###This finally did work
-/root/anaconda3/bin/conda create -n tensorflow python=3.6 <<EOF
-y
-EOF
+#/root/anaconda3/bin/conda create -n tensorflow python=3.6 <<EOF
+#y
+#EOF
 
-source /root/anaconda3/bin/activate tensorflow
+#source /root/anaconda3/bin/activate tensorflow
 
-/root/anaconda3/bin/conda install -c conda-forge tensorflow <<EOF
-y
-EOF
+#/root/anaconda3/bin/conda install -c conda-forge tensorflow <<EOF
+#y
+#EOF
 
 
 exit 0
