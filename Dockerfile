@@ -84,8 +84,8 @@ RUN /usr/bin/wget https://s3.amazonaws.com/yb-lab-cfg/ybcloud_v0.93.tar.gz \
 
 && /root/sw-config.sh \
 && rm /root/sw-config.sh \
-&& echo 'export PATH=/root/anaconda3/envs/tensorflow/bin:$PATH' >> /root/.bashrc \
-&& echo 'export PYTHONPATH=/root/anaconda3/envs/tensorflow/lib/python3.6/site-packages/:$PYTHONPATH' >> /root/.bashrc \
+&& echo 'export PATH=/root/anaconda2/envs/tensorflow/bin:$PATH' >> /root/.bashrc \
+&& echo 'export PYTHONPATH=/root/anaconda2/envs/tensorflow/lib/python3.6/site-packages/:$PYTHONPATH' >> /root/.bashrc \
 
 
 
@@ -94,10 +94,12 @@ RUN /usr/bin/wget https://s3.amazonaws.com/yb-lab-cfg/ybcloud_v0.93.tar.gz \
 && unzip master.zip \
 && rm master.zip \
 && cd prettytensor-master \
-&& /root/anaconda3/bin/python setup.py install \
+&& /root/anaconda2/bin/python setup.py install \
 
-&& /root/anaconda3/bin/pip install gym \
-&& /root/anaconda3/bin/pip install atari_py
+&& /root/anaconda2/bin/pip install gym \
+&& /root/anaconda2/bin/pip install atari_py \
+&& pip install moldesign
+
 
 
 
