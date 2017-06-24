@@ -58,7 +58,7 @@ RUN /usr/bin/wget https://s3.amazonaws.com/yb-lab-cfg/ibm-6.9.1.0-node-v6.9.1-li
 && cd pyscf/lib \
 && mkdir build \
 && cd build 
-#&& cmake .. \
+&& cmake .. 
 #&& make
 
 
