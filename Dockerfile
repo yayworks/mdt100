@@ -53,8 +53,8 @@ RUN /usr/bin/wget https://s3.amazonaws.com/yb-lab-cfg/ibm-6.9.1.0-node-v6.9.1-li
 
 && sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config \
 
-&& sudo apt-get install -y python-h5py python-scipy cmake 
-#&& git clone https://github.com/sunqm/pyscf \
+&& sudo apt-get install -y python-h5py python-scipy cmake \
+&& git clone https://github.com/sunqm/pyscf 
 #&& cd pyscf/lib \
 #&& mkdir build \
 #&& cd build \
